@@ -1,0 +1,19 @@
+{
+  "name": "element-slack-bot",
+  "version": "0.0.1",
+  "description": "A Slack bot for Element DID",
+  "main": "src/handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gjgd@protonmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
