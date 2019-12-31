@@ -25,8 +25,13 @@ module.exports.redirectUrl = async (event) => {
   };
   await dynamoDb.put(params).promise();
 
+  const { configuration_url: configurationUrl } = item.incoming_webhook;
+  const redirectUrl = `${configurationUrl.split('.com')[0]}.com`;
   return {
-    statusCode: 200,
-    body: { ok: true },
+    statusCode: 302,
+    headers: {
+      Location: redirectUrl,
+    },
+    body: null,
   };
 };
