@@ -1,5 +1,6 @@
 # package directories
 node_modules
+secrets.dev.yml
 
 # Serverless directories
 .serverless
