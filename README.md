@@ -1,3 +1,7 @@
+# To install
+
+https://slack.com/oauth/authorize?client_id=526646871811.867617605379&scope=incoming-webhook,channels:history
+
 # Overview
 
 A Slack bot for [Element DID](https://github.com/decentralized-identity/element), the Ethereum implementation of the [Sidetree](https://github.com/decentralized-identity/sidetree) protocol
