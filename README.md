@@ -26,3 +26,18 @@ We use https://github.com/serverless/serverless-secrets-plugin to encrypt the se
 - The [Incoming Webhook](https://api.slack.com/messaging/webhooks) service to allow the bot to post messages
 - The [Event Subscription](https://api.slack.com/events-api) service with the `message.channels` permissions using your `webhook` Lambda as the `Request URL`
 - The [Oauth 2.0](https://api.slack.com/docs/oauth) service using your `redirectUrl` Lambda as the Redirect URL
+
+# Useful commands
+
+```
+# Logs the activity of the webhook Lambda
+serverless logs -t -f webhook
+# Deploy only the webhook Lambda or all
+serverless deploy function -f webhook
+serverless deploy
+# Encrypt / Decrypt secrets.dev.yml
+serverless encrypt --stage dev --password 'your-password'
+serverless decrypt --stage dev --password 'your-password'
+# Remove all serverless services
+serverless remove
+```
