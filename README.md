@@ -34,7 +34,7 @@ We use https://github.com/serverless/serverless-secrets-plugin to encrypt the se
 4) Deploy the hooks `serverless deploy`
 5) In the Slack dashboard, setup
 - The [Incoming Webhook](https://api.slack.com/messaging/webhooks) service to allow the bot to post messages
-- The [Event Subscription](https://api.slack.com/events-api) service with the `message.groups` bot permissions using your `webhook` Lambda as the `Request URL`
+- The [Event Subscription](https://api.slack.com/events-api) service with the `message.channels` bot permissions using your `webhook` Lambda as the `Request URL`
 - The [Oauth 2.0](https://api.slack.com/docs/oauth) service using your `redirectUrl` Lambda as the Redirect URL
 
 # Useful commands
