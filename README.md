@@ -1,3 +1,8 @@
+# Screenshots
+
+![Slack screenshot](./images/slack.png)
+![Slack block explorer](./images/block-explorer.png)
+
 # To install
 
 https://slack.com/oauth/authorize?client_id=526646871811.867617605379&scope=incoming-webhook,channels:history
