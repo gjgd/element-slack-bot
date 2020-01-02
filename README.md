@@ -1,17 +1,18 @@
-# Screenshots
-
-![Slack screenshot](./images/slack.png)
-![Slack block explorer](./images/block-explorer.png)
-
 # To install
 
 https://slack.com/oauth/authorize?client_id=526646871811.867617605379&scope=incoming-webhook,channels:history
 
 # Overview
 
+## Description
 A Slack bot for [Element DID](https://github.com/decentralized-identity/element), the Ethereum implementation of the [Sidetree](https://github.com/decentralized-identity/sidetree) protocol
 
 This bot parses Slack messages in order to extract transaction hashes from Element transactions, and then posts links to the [Element Block Explorer](https://medium.com/transmute-techtalk/element-block-explorer-bb6d2c712664) to provide richer context about the transaction.
+
+## Screenshots
+
+![Slack screenshot](./images/slack.png)
+![Slack block explorer](./images/block-explorer.png)
 
 # Tech stack
 
