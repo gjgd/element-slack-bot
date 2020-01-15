@@ -3,6 +3,14 @@ service: tenderly-slack-hook
 plugins:
   - serverless-secrets-plugin
 
+package:
+  exclude:
+    - ./images/**
+    - ./secrets*
+    - ./README.md
+    - ./package.json
+    - ./package-lock.json
+
 provider:
   name: aws
   runtime: nodejs12.x
