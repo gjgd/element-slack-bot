@@ -14,6 +14,8 @@ package:
 provider:
   name: aws
   runtime: nodejs12.x
+  stackTags:
+    billing: element-slack-bot
   stage: dev
   environment:
     DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
