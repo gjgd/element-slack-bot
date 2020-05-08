@@ -8,7 +8,7 @@ module.exports.webhook = async (event) => {
   console.log(event);
   const body = JSON.parse(event.body);
   const ev = body.event;
-  if (ev && ev.text && ev.text.includes('New alert from element')) {
+  if (ev && ev.text && ev.text.includes('New alert from ')) {
     // Get the Slack hook URL
     const params = {
       TableName: process.env.DYNAMODB_TABLE,
@@ -19,7 +19,7 @@ module.exports.webhook = async (event) => {
     const record = await dynamoDb.get(params).promise();
     const { url } = record.Item.incoming_webhook;
     // Get the element URL from the Tenderly notif
-    const field = ev.blocks[1].fields[2];
+    const field = ev.attachments[0].blocks[0].fields[2];
     const regex = /ropsten\/(.*)\?/;
     const txHash = regex.exec(field.text)[1];
     const elementUrl = `https://element-did.com/server/transactions/${txHash}`;
