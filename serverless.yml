@@ -12,6 +12,7 @@ package:
     - ./package-lock.json
 
 provider:
+  profile: serverless-admin
   name: aws
   runtime: nodejs12.x
   stackTags:
