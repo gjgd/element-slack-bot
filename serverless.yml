@@ -1,4 +1,6 @@
 service: tenderly-slack-hook
+org: gjgdserverless
+app: tenderly-slack-hook
 
 plugins:
   - serverless-secrets-plugin
