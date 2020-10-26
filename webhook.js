@@ -5,7 +5,6 @@ const AWS = require('aws-sdk');
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
 module.exports.webhook = async (event) => {
-  console.log(event);
   const body = JSON.parse(event.body);
   const ev = body.event;
   if (ev && ev.text && ev.text.includes('New alert from ')) {
@@ -22,7 +21,7 @@ module.exports.webhook = async (event) => {
     const field = ev.attachments[0].blocks[0].fields[2];
     const regex = /ropsten\/(.*)\?/;
     const txHash = regex.exec(field.text)[1];
-    const elementUrl = `https://element-did.com/server/transactions/${txHash}`;
+    const elementUrl = `https://staging.element.transmute.industries/workbench/transactions/${txHash}`;
     await fetch(url, {
       method: 'POST',
       headers: {
